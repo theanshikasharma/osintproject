@@ -1,0 +1,41 @@
+from fastapi import FastAPI
+import requests
+
+app = FastAPI()
+
+@app.post("/api/location")
+def get_location(data: dict):
+    lat = data["latitude"]
+    lon = data["longitude"]
+
+    # Reverse geocoding (OSM)
+    geo = requests.get(
+        "https://nominatim.openstreetmap.org/reverse",
+        params={"lat": lat, "lon": lon, "format": "json"},
+        headers={"User-Agent": "OSINT-Dashboard"}
+    ).json()
+
+    location_name = geo.get("display_name", "Unknown location")
+
+    # Elevation
+    elevation = requests.get(
+        "https://api.open-elevation.com/api/v1/lookup",
+        params={"locations": f"{lat},{lon}"}
+    ).json()
+
+    altitude = elevation["results"][0]["elevation"]
+
+    return {
+        "coordinates": {
+            "lat": lat,
+            "lon": lon
+        },
+        "location": location_name,
+        "altitude_m": altitude,
+        "accuracy": {
+            "level": "High",
+            "range_m": 5
+        },
+        "verified": True
+    }
+

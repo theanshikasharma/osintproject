@@ -1,0 +1,23 @@
+INFO:     Started server process [84051]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:62821 - "POST /api/location HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62967 - "POST /api/location HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63007 - "POST /api/location HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63013 - "POST /api/location HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63178 - "POST /api/location HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63185 - "POST /api/location HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63210 - "POST /api/location HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63230 - "POST /api/location HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63274 - "POST /api/location HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63333 - "POST /api/location HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63355 - "POST /api/location HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63694 - "POST /api/location HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63768 - "POST /api/location HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63998 - "POST /api/location HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64723 - "GET /verify-location?lat=28.6139&lon=77.2090 HTTP/1.1" 404 Not Found
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [84051]

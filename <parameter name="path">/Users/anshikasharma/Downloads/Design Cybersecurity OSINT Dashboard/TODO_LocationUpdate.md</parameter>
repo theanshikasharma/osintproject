@@ -1,0 +1,27 @@
+<parameter name="content"># Location Card Update - TODO List
+
+## Objective
+Update the LocationCard component and backend to display city, altitude, and accuracy information from GPS coordinates.
+
+## Tasks
+
+### Backend Updates
+- [ ] 1. Update `/api/location` endpoint in `backend/main.py` to return city, altitude, and accuracy
+- [ ] 2. Add altitude calculation using elevation API or GPS data
+- [ ] 3. Add accuracy field to response
+
+### Frontend Updates
+- [ ] 4. Update `src/api/location.ts` interface and API call
+- [ ] 5. Update `src/components/analysis/LocationCard.tsx` to display city, altitude, accuracy
+- [ ] 6. Enhance UI with proper styling and loading states
+
+## Implementation Order
+1. Update backend API response format
+2. Update TypeScript API layer
+3. Update React component UI
+
+## Status
+- [x] Plan created
+- [ ] In progress
+- [ ] Completed
+</parameter>
